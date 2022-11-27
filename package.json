@@ -7,7 +7,10 @@
   "license": "MIT",
   "scripts": {
     "start": "node -r esm server/server.js",
-    "server": "nodemon -r esm server/server.js"
+    "server": "nodemon -r esm server/server.js",
+    "client-install": "yarn --cwd ./client install",
+    "client": "yarn --cwd ./client start",
+    "dev": "concurrently \"yarn server\" \"yarn client\" "
   },
   "dependencies": {
     "colors": "^1.4.0",
